@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class RbacRepoSnapshotDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'repo_id' => 'repoId', 'commit_id' => 'commitId', 'taken_at' => 'takenAt' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'repo_id' => 'repoId', 'commit_id' => 'commitId', 'taken_at' => 'takenAt', 'metadata' => 'metadata' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];
