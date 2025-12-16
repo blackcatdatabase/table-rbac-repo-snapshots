@@ -5,11 +5,11 @@ Stored RBAC snapshots pulled from repositories.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| commit_id | VARCHAR(128) | NO |  | Commit/version identifier stored. |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| metadata | JSON | YES |  | JSON metadata associated with the snapshot. |
 | repo_id | BIGINT | NO |  | Source repository (FK rbac_repositories.id). |
-| taken_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | When the snapshot was taken. |
+| commit_id | VARCHAR(128) | NO |  | Commit/version identifier stored. |
+| taken_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | When the snapshot was taken. |
+| metadata | mysql: JSON / postgres: JSONB | YES |  | JSON metadata associated with the snapshot. |
 
 ## Engine Details
 
@@ -52,5 +52,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_rbac_repo_snapshots | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
-| vw_rbac_repo_snapshots | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
+| vw_rbac_repo_snapshots | mysql | algorithm=MERGE, security=INVOKER | [../schema/040_views.mysql.sql](../schema/040_views.mysql.sql) |
+| vw_rbac_repo_snapshots | postgres |  | [../schema/040_views.postgres.sql](../schema/040_views.postgres.sql) |
