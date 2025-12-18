@@ -3,13 +3,13 @@
 Stored RBAC snapshots pulled from repositories.
 
 ## Columns
-| Column | Type | Null | Default | Description |
-| --- | --- | --- | --- | --- |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| repo_id | BIGINT | NO |  | Source repository (FK rbac_repositories.id). |
-| commit_id | VARCHAR(128) | NO |  | Commit/version identifier stored. |
-| taken_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | When the snapshot was taken. |
-| metadata | mysql: JSON / postgres: JSONB | YES |  | JSON metadata associated with the snapshot. |
+| Column | Type | Null | Default | Description | Crypto |
+| --- | --- | --- | --- | --- | --- |
+| id | BIGINT | NO |  | Surrogate primary key. |  |
+| repo_id | BIGINT | NO |  | Source repository (FK rbac_repositories.id). |  |
+| commit_id | VARCHAR(128) | NO |  | Commit/version identifier stored. |  |
+| taken_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | When the snapshot was taken. |  |
+| metadata | mysql: JSON / postgres: JSONB | YES |  | JSON metadata associated with the snapshot. |  |
 
 ## Engine Details
 
