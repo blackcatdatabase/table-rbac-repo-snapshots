@@ -1,0 +1,23 @@
+{
+  "tables": {
+    "rbac_repo_snapshots": {
+      "columns": {
+        "commit_id": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "metadata": {
+          "strategy": "passthrough"
+        },
+        "repo_id": {
+          "strategy": "passthrough"
+        },
+        "taken_at": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
